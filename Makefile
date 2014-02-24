@@ -5,8 +5,8 @@ LIBS_1 = -lerror
 #OBJS = lstat.o 
 #OBJS = umask.o
 #OBJS = unlink.o
-
-OBJS = utime.o
+#OBJS = utime.o
+OBJS = getc_putc.o
 
 
 
@@ -14,7 +14,8 @@ OBJS = utime.o
 #lstat : ${OBJS}
 #umast : ${OBJS}
 #unlinke :${OBJS}
-utime :${OBJS}
+#utime :${OBJS}
+getc_putc :${OBJS}
 	gcc -o $@ ${OBJS} ${LIBS} ${LIBS_1}
 
 clean :
