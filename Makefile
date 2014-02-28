@@ -6,7 +6,15 @@ LIBS_1 = -lerror
 #OBJS = umask.o
 #OBJS = unlink.o
 #OBJS = utime.o
-OBJS = getc_putc.o
+#OBJS = getc_putc.o
+#OBJS = gets_puts.o
+#OBJS = tempname_file.o
+#OBJS = type_structure.o
+#OBJS = fork.o
+#OBJS = vfork.o
+#OBJS = re_stdin_ex.o
+OBJS = re_stdin_ex_2.o
+
 
 
 
@@ -15,7 +23,18 @@ OBJS = getc_putc.o
 #umast : ${OBJS}
 #unlinke :${OBJS}
 #utime :${OBJS}
-getc_putc :${OBJS}
+#getc_putc :${OBJS}
+#gets_puts :${OBJS}
+#tempname_file :${OBJS}
+#type_structure:${OBJS}
+#fork:${OBJS}
+#vfork:${OBJS}
+#re_stdin_ex:${OBJS}
+re_stdin_ex_2:${OBJS}
+
+
+
+
 	gcc -o $@ ${OBJS} ${LIBS} ${LIBS_1}
 
 clean :

@@ -1,4 +1,9 @@
-/*对每个命令行参数打印其文件类型*/
+/*
+ *本函数实现从命令输入参数打印其文件类型
+ *lstat函数原型 --int lstat (const char *pathname, struct stat *buf)
+ *struct stat 结构体类型包含文件的基本形式
+2014年 02月 24日 星期一 21:22:42 CST
+ */
 #include "apue.h"
 int main (int argc, char *argv [])
 {   
@@ -8,7 +13,7 @@ int main (int argc, char *argv [])
 
     for (i=1; i<argc; i++){
         printf ("%s: ",argv[i]);
-        if (lstat (argv[i], &buf1) <0){
+        if (lstat (argv[i], &buf1) <0){ //调用lstat 应注意后面的结构体需要加&
             err_ret ("lstat error");
         continue ;
     }
