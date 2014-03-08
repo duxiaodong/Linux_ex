@@ -26,3 +26,4 @@ int main (void)
     }
     printf("pid = %d, glob =%d, var = %d\n",getpid(), glob, var );
 }
+//使用
